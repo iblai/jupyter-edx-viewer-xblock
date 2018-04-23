@@ -55,8 +55,13 @@ The REST endpoint takes the following query parameters:
     * if supplied, will start in **FIRST** cell that contains this text
     * if not supplied, it starts at the beginning
 * `end`: (optional) text that ending cell contains
-    * if supplied, will end at **FIRST** cell that contains this text (not-inclusive)
+    * if supplied, will end at **FIRST** cell that contains this text (not-inclusive - this cell is not shown) 
     * if not supplied, it will end at the end of the document
+* `images_url`: (optional) url to root of an images location (for `<img>` tags)
+    * if supplied, this will be pre-pended to the filename in the `src` attribute of all `<img src=...>` tags in the notebook
+    * example: 
+        * images_url :`http://mysite.com/images/`
+        * `<img src="/something/image.jpg">` becomes `<img src="http://mysite.com/images/image.jp">`
 
 It is often easiest to use the markdown headers as the start/end tags, eg:
 * `### My Start Header`
@@ -73,7 +78,7 @@ There are various pre and post processors that are applied to notebook when conv
 ### Pre-Processors
 These operate on each cell of the notebook, typically making some kind of change to either the overall notebook structure or a single cell.
 
-The cells of the notebook are iterated over and each cell is passed to one of the processors, in the sequence the processors are added. 
+The cells of the notebook are iterated over and each cell is passed to each processor in the sequence the processors are added. 
 
 After all cells have completed, the `finish` function is called for each processor to do any final cleanup.
 
