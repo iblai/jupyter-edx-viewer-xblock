@@ -1,0 +1,3820 @@
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h6 id="Content-under-Creative-Commons-Attribution-license-CC-BY-4.0,-code-under-BSD-3-Clause-License-&#169;-2017-L.A.-Barba,-N.C.-Clementi">Content under Creative Commons Attribution license CC-BY 4.0, code under BSD 3-Clause License &#169; 2017 L.A. Barba, N.C. Clementi<a class="anchor-link" href="#Content-under-Creative-Commons-Attribution-license-CC-BY-4.0,-code-under-BSD-3-Clause-License-&#169;-2017-L.A.-Barba,-N.C.-Clementi">&#182;</a></h6>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h1 id="Interacting-with-Python">Interacting with Python<a class="anchor-link" href="#Interacting-with-Python">&#182;</a></h1><p>This is the first lesson in our course <em>"Engineering Computations"</em>, a one-semester course for second-year university students. The course uses Python, and assumes no prior programming experience. 
+
+Our first step will be to get you interacting with Python.
+
+But let's also learn some background.</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h2 id="What-is-Python?">What is Python?<a class="anchor-link" href="#What-is-Python?">&#182;</a></h2><p>Python is now 26 years old. Its creator, <a href="https://en.wikipedia.org/wiki/Guido_van_Rossum">Guido van Rossum</a>, named it after the British comedy "Monty Python's Flying Circus." His goals for the language were that it be an "an easy and intuitive language just as powerful as major competitors," producing computer code "that is as understandable as plain English."</p>
+
+<p>It is a general-purpose language, which means that you can use it for anything:  organizing data, scraping the web, creating websites, analyzing sounds, creating games, and of course <em>engineering computations</em>.</p>
+
+<p>Python is an interpreted language. This means that you can write Python commands and the computer can execute those instructions directly. Other programming languages—like C, C++ and Fortran—require a previous <em>compilation</em> step: translating the commands into machine language.
+
+A neat ability of Python is to be used <em>interactively</em>. <a href="https://en.wikipedia.org/wiki/Fernando_Pérez_(software_developer">Fernando Perez</a>) famously created <strong>IPython</strong> as a side-project during his PhD. We're going to use IPython (the I stands for "interactive") in this lesson.</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h2 id="Why-Python?">Why Python?<a class="anchor-link" href="#Why-Python?">&#182;</a></h2><p><em>Because it's fun!</em> With Python, the more you learn, the more you <em>want</em> to learn.
+
+You can find lots of resources online and, since Python is an open-source project, you'll also find a friendly community of people sharing their knowledge.</p>
+
+<p>Python is known as a <em>high-productivity language</em>. As a programmer, you'll need less time to develop a solution with Python than with most languages. 
+
+This is important to always bring up whenever someone complains that "Python is slow."
+
+Your time is more valuable than a machine's!
+
+(See the Recommended Readings section at the end.)
+
+And if we really need to speed up our program, we can re-write the slow parts in a compiled language afterwards.
+
+Because Python plays well with other languages :–)</p>
+
+<p>The top technology companies use Python: Google, Facebook, Dropbox, Wikipedia, Yahoo!, YouTube… And this year, Python took the No. 1 spot in the interactive list of <a href="http://spectrum.ieee.org/computing/software/the-2017-top-programming-languages">The 2017 Top Programming Languages</a>, by <em>IEEE Spectrum</em> (<a href="http://www.ieee.org/about/index.html">IEEE</a> is the world's largest technical professional society).</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h4 id="Python-is-a-versatile-language,-you-can-analyze-data,-build-websites-(e.g.,-Instagram,-Mozilla,-Pinterest),-make-art-or-music,-etc.-Because-it-is-a-versatile-language,-employers-love-Python:-if-you-know-Python-they-will-want-to-hire-you.-&#8212;Jessica-McKellar,-ex-Director-of-the-Python-Software-Foundation,-in-a-2014-tutorial."><em>Python is a versatile language, you can analyze data, build websites (e.g., Instagram, Mozilla, Pinterest), make art or music, etc. Because it is a versatile language, employers love Python: if you know Python they will want to hire you.</em> &#8212;Jessica McKellar, ex Director of the Python Software Foundation, in a <a href="https://youtu.be/rkx5_MRAV3A">2014 tutorial</a>.<a class="anchor-link" href="#Python-is-a-versatile-language,-you-can-analyze-data,-build-websites-(e.g.,-Instagram,-Mozilla,-Pinterest),-make-art-or-music,-etc.-Because-it-is-a-versatile-language,-employers-love-Python:-if-you-know-Python-they-will-want-to-hire-you.-&#8212;Jessica-McKellar,-ex-Director-of-the-Python-Software-Foundation,-in-a-2014-tutorial.">&#182;</a></h4>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h2 id="Let's-get-started">Let's get started<a class="anchor-link" href="#Let's-get-started">&#182;</a></h2><p>In this first lesson, we will be using IPython: a tool for working with Python interactively. If you have it installed in the computer you're using for this lesson, you enter the program by typing</p>
+
+<p><code>ipython</code></p>
+
+<p>on the command-line interface (the <strong>Terminal</strong> app on Mac OSX, and on Windows possibly the <strong>PowerShell</strong> or <strong>git bash</strong>). You will get a few lines of text about your IPython version and how to get help, and a blinking cursor next to the input line counter:</p>
+
+<p><code>In[1]:</code></p>
+
+<p>That input line is ready to receive any Python code to be executed interactively. The output of the code will be shown to you next to <code>Out[1]</code>, and so on for successive input/output lines.</p>
+
+<h5 id="Note:">Note:<a class="anchor-link" href="#Note:">&#182;</a></h5><p>Our plan for this course is to work in a computer lab, where everyone will have a computer with everything installed ahead of time. For this reason, we won't discuss installation right now. Later on, when you're eager to work on your personal computer, we'll help you install everything you need. <em>It's all free!</em></p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h3 id="Your-first-program">Your first program<a class="anchor-link" href="#Your-first-program">&#182;</a></h3><p>In every programming class ever, your first program consists of printing a <em>"Hello"</em> message. In Python, you use the <code>print()</code> function, with your message inside quotation marks.</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="nb">print</span><span class="p">(</span><span class="s">&quot;Hello world!!&quot;</span><span class="p">)</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt"></div>
+
+
+
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+
+<pre>Hello world!!
+
+</pre>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<p>Easy peasy!! You just wrote your first program and you learned how to use the <code>print()</code> function. Yes, <code>print()</code> is a function: we pass the <em>argument</em> we want the function to act on, inside the parentheses. In the case above, we passed a <em>string</em>, which is a series of characters between quotation marks. Don't worry, we will come back to what strings are later on in this lesson.</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h5 id="Key-concept:-function">Key concept: function<a class="anchor-link" href="#Key-concept:-function">&#182;</a></h5><p>A function is a compact collection of code that executes some action on its <em>arguments</em>.  Every Python function has a <em>name</em>, used to call it, and takes its arguments inside round brackets. Some arguments may be optional (which means they have a default value defined inside the function), others are required. For example, the <code>print()</code> function has one required argument: the string of characters it should print out for you.</p>
+
+<p>Python comes with many <em>built-in</em> functions, but you can also build your own. Chunking blocks of code into functions is one of the best strategies to deal with complex programs. It makes you more efficient, because you can reuse the code that you wrote into a function. Modularity and reuse are every programmer's friend.</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h3 id="Python-as-a-calculator">Python as a calculator<a class="anchor-link" href="#Python-as-a-calculator">&#182;</a></h3><p>Try any arithmetic operation in IPython. The symbols are what you would expect, except for the "raise-to-the-power-of" operator, which you obtain with two asterisks: <code>**</code>. Try all of these:</p>
+
+<div class="highlight"><pre><span class="o">+</span>   <span class="o">-</span>   <span class="o">*</span>   <span class="o">/</span>   <span class="o">**</span>   <span class="o">%</span>   <span class="o">//</span>
+
+</pre></div>
+
+<p>The <code>%</code> symbol is the <em>modulo</em> operator (divide and return remainder), and the double-slash is <em>floor division</em>.</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[2]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>4</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="mf">1.25</span> <span class="o">+</span> <span class="mf">3.65</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>4.9</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="mi">5</span> <span class="o">-</span> <span class="mi">3</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>2</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="mi">2</span> <span class="o">*</span> <span class="mi">4</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>8</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="mi">7</span> <span class="o">/</span> <span class="mi">2</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>3.5</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="mi">2</span><span class="o">**</span><span class="mi">3</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>8</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<p>Let's see an interesting case:</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="mi">9</span><span class="o">**</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>4.5</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h5 id="Discuss-with-your-neighbor:">Discuss with your neighbor:<a class="anchor-link" href="#Discuss-with-your-neighbor:">&#182;</a></h5><p><em>What happened?</em> Isn't $9^{1/2} = 3$? (Raising to the power $1/2$ is the same as taking the square root.) Did Python get this wrong?</p>
+
+<p>Compare with this:</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="mi">9</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>3.0</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<p>Yes! The order of operations matters!</p>
+
+<p>If you don't remember what we are talking about, review the <a href="https://en.wikibooks.org/wiki/Arithmetic/Order_of_Operations">Arithmetics/Order of operations</a>. A frequent situation that exposes this is the following:</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="mi">3</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>4.5</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>3.0</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<p>In the first case, we are adding $3$ plus the number resulting of the operation $3/2$. If we want the division to apply to the result of $3+3$, we need the parentheses.</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h5 id="Exercises:">Exercises:<a class="anchor-link" href="#Exercises:">&#182;</a></h5><p>Use IPython (as a calculator) to solve the following two problems:</p>
+
+<ol>
+
+<li><p>The volume of a sphere with radius $r$ is $\frac{4}{3}\pi r^3$. What is the volume of a sphere with diameter 6.65 cm?</p>
+
+<p>For the value of $\pi$ use 3.14159 (for now). Compare your answer with the solution up to 4 decimal numbers.</p>
+
+<p>Hint: 523.5983 is wrong and 615.9184 is also wrong.</p>
+
+</li>
+
+<li><p>Suppose the cover price of a book is $\$ 24.95$, but bookstores get a $40\%$ discount. Shipping costs $\$3$ for the first copy and $75$ cents for each additional copy. What is the total wholesale cost for $60$ copies? Compare your answer with the solution up to 2 decimal numbers.</p>
+
+</li>
+
+</ol>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<p>To reveal the answers, highlight the following line of text using the mouse:</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<p>Answer exercise 1: <span style="color:white"> 153.9796 </span> Answer exercise 2: <span style="color:white"> 945.45 </span></p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h3 id="Variables-and-their-type">Variables and their type<a class="anchor-link" href="#Variables-and-their-type">&#182;</a></h3><p>Variables consist of two parts: a name and a value. When we want to give a variable its name and value, we use the equal sign: <code>name = value</code>. This is called an <em>assignment</em>. The name of the variable goes on the left and the value on the right.</p>
+
+<p>The first thing to get used to is that the equal sign in an assignment has a different meaning than it has in Algebra! Think of it as an arrow pointing from <code>name</code> to <code>value</code>.</p>
+
+<p><img src="images/variables.png" style="width: 400px;"/></p>
+
+<p>We have many possibilities for variable names: they can be made up of upper and lowercase letters, underscores and digits… although digits cannot go on the front of the name. For example, valid variable names are:</p>
+
+<div class="highlight"><pre><span class="n">x</span>
+
+    <span class="n">x1</span>
+
+    <span class="n">X_2</span>
+
+    <span class="n">name_3</span>
+
+    <span class="n">NameLastname</span>
+
+</pre></div>
+
+<p>Keep in mind, there are reserved words that you can't use; they are the special Python <a href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">keywords</a>.</p>
+
+<p>OK. Let's assign some values to variables and do some operations with them:</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">y</span> <span class="o">=</span> <span class="mf">4.5</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h5 id="Exercise:">Exercise:<a class="anchor-link" href="#Exercise:">&#182;</a></h5><p>Print the values of the variables <code>x</code> and <code>y</code>.</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<p>Let's do some arithmetic operations with our new variables:</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>7.5</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="mi">2</span><span class="o">**</span><span class="n">x</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[15]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>8</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">y</span> <span class="o">-</span> <span class="mi">3</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>1.5</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<p>And now, let's check the values of <code>x</code> and <code>y</code>. Are they still the same as they were when you assigned them?</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt"></div>
+
+
+
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+
+<pre>3
+
+</pre>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt"></div>
+
+
+
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+
+<pre>4.5
+
+</pre>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h3 id="String-variables">String variables<a class="anchor-link" href="#String-variables">&#182;</a></h3><p>In addition to name and value, Python variables have a <em>type</em>: the type of the value it refers to. For example, an integer value has type <code>int</code>, and a real number has type <code>float</code>. A string is a variable consisting of a sequence of characters marked by two quotes, and it has type <code>str</code>.</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">z</span> <span class="o">=</span> <span class="s">&#39;this is a string&#39;</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">w</span> <span class="o">=</span> <span class="s">&#39;1&#39;</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<p>What if you try to "add" two strings?</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">z</span> <span class="o">+</span> <span class="n">w</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[21]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>&#39;this is a string1&#39;</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<p>The operation above is called <em>concatenation</em>: chaining two strings together into one. Insteresting, eh? But look at this:</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">x</span> <span class="o">+</span> <span class="n">w</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt"></div>
+
+
+
+
+
+<div class="output_subarea output_text output_error">
+
+<pre>
+
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+
+<span class="ansi-green-fg">&lt;ipython-input-22-bc79f95cdaf2&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>x <span class="ansi-blue-fg">+</span> w
+
+
+
+<span class="ansi-red-fg">TypeError</span>: unsupported operand type(s) for +: &#39;int&#39; and &#39;str&#39;</pre>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<p><em>Error!</em> Why? Let's inspect what Python has to say and explore what is happening.</p>
+
+<p>Python is a <em>dynamic language</em>, which means that you don't <em>need</em> to specify a type to invoke an existing object. The humorous nickname for this is "duck typing":</p>
+
+<h4 id="&quot;If-it-looks-like-a-duck,-and-quacks-like-a-duck,-then-it's-probably-a-duck.&quot;">"If it looks like a duck, and quacks like a duck, then it's probably a duck."<a class="anchor-link" href="#&quot;If-it-looks-like-a-duck,-and-quacks-like-a-duck,-then-it's-probably-a-duck.&quot;">&#182;</a></h4><p>In other words, a variable has a type, but we don't need to specify it. It will just behave like it's supposed to when we operate with it (it'll quack and walk like nature intended it to).</p>
+
+<p>But sometimes you need to make sure you know the type of a variable. Thankfully, Python offers a function to find out the type of a variable: <code>type()</code>.</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[23]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>int</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="nb">type</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[24]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>str</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[25]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>float</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h3 id="More-assignments">More assignments<a class="anchor-link" href="#More-assignments">&#182;</a></h3><p>What if you want to assign to a new variable the result of an operation that involves other variables? Well, you totally can!</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">sum_xy</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+
+<span class="n">diff_xy</span> <span class="o">=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="nb">print</span><span class="p">(</span><span class="s">&#39;The sum of x and y is:&#39;</span><span class="p">,</span> <span class="n">sum_xy</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s">&#39;The difference between x and y is:&#39;</span><span class="p">,</span> <span class="n">diff_xy</span><span class="p">)</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt"></div>
+
+
+
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+
+<pre>The sum of x and y is: 7.5
+
+The difference between x and y is: -1.5
+
+</pre>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<p>Notice what we did above: we used the <code>print()</code> function with a string message, followed by a variable, and Python printed a useful combination of the message and the variable value. This is a pro tip! You want to print for humans. Let's now check the type of the new variables we just created above:</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="nb">type</span><span class="p">(</span><span class="n">sum_xy</span><span class="p">)</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[28]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>float</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="nb">type</span><span class="p">(</span><span class="n">diff_xy</span><span class="p">)</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[29]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>float</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h5 id="Discuss-with-your-neighbor:">Discuss with your neighbor:<a class="anchor-link" href="#Discuss-with-your-neighbor:">&#182;</a></h5><p>Can you summarize what we did above?</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h3 id="Special-variables">Special variables<a class="anchor-link" href="#Special-variables">&#182;</a></h3><p>Python has special variables that are built into the language. These are: 
+
+<code>True</code>, <code>False</code>, <code>None</code> and <code>NotImplemented</code>. 
+
+For now, we will look at just the first three of these.</p>
+
+<p><strong>Boolean variables</strong> are used to represent truth values, and they can take one of two possible values: <code>True</code> and <code>False</code>.
+
+<em>Logical expressions</em> return a boolean. Here is the simplest logical expression, using the keyword <code>not</code>:</p>
+
+<div class="highlight"><pre><span class="ow">not</span> <span class="bp">True</span>
+
+</pre></div>
+
+<p>It returns… you guessed it… <code>False</code>.</p>
+
+<p>The Python function <code>bool()</code> returns a truth value assigned to any argument. Any number other than zero has a truth value of <code>True</code>, as well as any nonempty string or list. The number zero and any empty string or list will have a truth value of <code>False</code>. Explore the <code>bool()</code> function with various arguments.</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[30]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>False</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="nb">bool</span><span class="p">(</span><span class="s">&#39;Do we need oxygen?&#39;</span><span class="p">)</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[31]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>True</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="nb">bool</span><span class="p">(</span><span class="s">&#39;We do not need oxygen&#39;</span><span class="p">)</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[32]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>True</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<p><strong>None is not Zero</strong>: <code>None</code> is a special variable indicating that no value was assigned or that a behavior is undefined. It is different than the value zero, an empty string, or some other nil value.</p>
+
+<p>You can check that it is not zero by trying to add it to a number. Let's see what happens when we try that:</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">a</span> <span class="o">=</span> <span class="k">None</span>
+
+
+
+<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt"></div>
+
+
+
+
+
+<div class="output_subarea output_text output_error">
+
+<pre>
+
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+
+<span class="ansi-green-fg">&lt;ipython-input-34-f96fb8f649b6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>a <span class="ansi-blue-fg">+</span> b
+
+
+
+<span class="ansi-red-fg">TypeError</span>: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#39;</pre>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h3 id="Logical-and-comparison-operators">Logical and comparison operators<a class="anchor-link" href="#Logical-and-comparison-operators">&#182;</a></h3><p>The Python comparison operators are: <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>==</code>, <code>!=</code>. They compare two objects and return either <code>True</code> or <code>False</code>: smaller than, smaller or equal, greater than, greater or equal, equal, not equal. Try it!</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[36]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>False</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<p>We can assign the truth value of a comparison operation to a new variable name:</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">z</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[38]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>False</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="nb">type</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[39]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>bool</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<p>Logical operators are the following: <code>and</code>, <code>or</code>, and <code>not</code>. They work just like English (with the added bonus of being always consistent, not like English speakers!).  A logical expression with <code>and</code> is <code>True</code> if both operands are true, and one with <code>or</code> is <code>True</code> when either operand is true. And the keyword <code>not</code> always negates the expression that follows.</p>
+
+<p>Let's do some examples:</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="mi">10</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="ow">and</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="n">c</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[41]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>False</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<p>Remember that the logical operator <code>and</code> is <code>True</code> only when both operands are <code>True</code>. In the case above the first operand is <code>True</code> but the second one is <code>False</code>.</p>
+
+<p>If we try the <code>or</code> operation using the same operands we should get a <code>True</code>.</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="n">c</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[42]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>True</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<p>And the negation of the second operand results in …</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="ow">not</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="n">c</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[43]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>True</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<p>What if we negate the second operand in the <code>and</code> operation above?</p>
+
+<h5 id="Note:">Note:<a class="anchor-link" href="#Note:">&#182;</a></h5><p>Be careful with the order of logical operations. The order of precedence in logic is:</p>
+
+<ol>
+
+<li>Negation</li>
+
+<li>And</li>
+
+<li>Or</li>
+
+</ol>
+
+<p>If you don't rememeber this, make sure to use parentheses to indicate the order you want.</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h5 id="Exercise:">Exercise:<a class="anchor-link" href="#Exercise:">&#182;</a></h5><p>What is happening in the case below? Play around with logical operators and try some examples.</p>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="n">c</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[44]:</div>
+
+
+
+
+
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+
+<pre>True</pre>
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h2 id="What-we've-learned">What we've learned<a class="anchor-link" href="#What-we've-learned">&#182;</a></h2><ul>
+
+<li>Using the <code>print()</code> function. The concept of <em>function</em>.</li>
+
+<li>Using Python as a calculator.</li>
+
+<li>Concepts of variable, type, assignment.</li>
+
+<li>Special variables: <code>True</code>, <code>False</code>, <code>None</code>.</li>
+
+<li>Supported operations, logical operations. </li>
+
+<li>Reading error messages.</li>
+
+</ul>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h2 id="References">References<a class="anchor-link" href="#References">&#182;</a></h2><p>Throughout this course module, we will be drawing from the following references:</p>
+
+<ol>
+
+<li><em>Effective Computation in Physics: Field Guide to Research with Python</em> (2015). Anthony Scopatz &amp; Kathryn D. Huff. O'Reilly Media, Inc.</li>
+
+<li><em>Python for Everybody: Exploring Data Using Python 3</em> (2016). Charles R. Severance. <a href="http://do1.dr-chuck.com/pythonlearn/EN_us/pythonlearn.pdf">PDF available</a></li>
+
+<li><em>Think Python: How to Think Like a Computer Scientist</em> (2012). Allen Downey. Green Tea Press.  <a href="http://greenteapress.com/thinkpython/thinkpython.pdf">PDF available</a></li>
+
+</ol>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+
+</div>
+
+<div class="inner_cell">
+
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<h3 id="Recommended-Readings">Recommended Readings<a class="anchor-link" href="#Recommended-Readings">&#182;</a></h3><ul>
+
+<li><a href="https://hackernoon.com/yes-python-is-slow-and-i-dont-care-13763980b5a1">"Yes, Python is Slow, and I Don’t Care"</a> by Nick Humrich, on Hackernoon. (Skip the part on microservices, which is a bit specialized, and continue after the photo of moving car lights.)</li>
+
+<li><a href="http://lorenabarba.com/blog/why-i-push-for-python/">"Why I Push for Python"</a>, by Prof. Lorena A. Barba (2014). This blog post got a bit of interest over at <a href="https://news.ycombinator.com/item?id=7760870">Hacker News</a>.</li>
+
+</ul>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="input">
+
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+
+<div class="inner_cell">
+
+    <div class="input_area">
+
+<div class=" highlight hl-ipython3"><pre><span class="c"># Execute this cell to load the notebook&#39;s style sheet, then ignore it</span>
+
+<span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">HTML</span>
+
+<span class="n">css_file</span> <span class="o">=</span> <span class="s">&#39;../../style/custom.css&#39;</span>
+
+<span class="n">HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">css_file</span><span class="p">,</span> <span class="s">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+
+</pre></div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="output_wrapper">
+
+<div class="output">
+
+
+
+
+
+<div class="output_area">
+
+
+
+<div class="prompt output_prompt">Out[45]:</div>
+
+
+
+
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i" rel="stylesheet">
+
+<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400' rel='stylesheet' type='text/css'>
+
+<style>
+
+
+
+@font-face {
+
+    font-family: "Computer Modern";
+
+    src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
+
+}
+
+
+
+
+
+#notebook_panel { /* main background */
+
+    background: rgb(245,245,245);
+
+}
+
+
+
+div.cell { /* set cell width */
+
+    width: 800px;
+
+}
+
+
+
+div #notebook { /* centre the content */
+
+    background: #fff; /* white background for content */
+
+    width: 1000px;
+
+    margin: auto;
+
+    padding-left: 0em;
+
+}
+
+
+
+#notebook li { /* More space between bullet points */
+
+margin-top:0.8em;
+
+}
+
+
+
+/* draw border around running cells */
+
+div.cell.border-box-sizing.code_cell.running { 
+
+    border: 1px solid #111;
+
+}
+
+
+
+/* Put a solid color box around each cell and its output, visually linking them*/
+
+div.cell.code_cell {
+
+    background-color: rgb(256,256,256); 
+
+    border-radius: 0px; 
+
+    padding: 0.5em;
+
+    margin-left:1em;
+
+    margin-top: 1em;
+
+}
+
+
+
+
+
+div.text_cell_render{
+
+    font-family: 'Source Sans Pro', sans-serif;
+
+    line-height: 140%;
+
+    font-size: 110%;
+
+    width:680px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+
+
+/* Formatting for header cells */
+
+.text_cell_render h1 {
+
+    font-family: 'Merriweather', serif;
+
+    font-style:regular;
+
+    font-weight: bold;    
+
+    font-size: 250%;
+
+    line-height: 100%;
+
+    color: #004065;
+
+    margin-bottom: 1em;
+
+    margin-top: 0.5em;
+
+    display: block;
+
+}	
+
+.text_cell_render h2 {
+
+    font-family: 'Merriweather', serif;
+
+    font-weight: bold; 
+
+    font-size: 180%;
+
+    line-height: 100%;
+
+    color: #0096d6;
+
+    margin-bottom: 0.5em;
+
+    margin-top: 0.5em;
+
+    display: block;
+
+}	
+
+
+
+.text_cell_render h3 {
+
+    font-family: 'Merriweather', serif;
+
+	font-size: 150%;
+
+    margin-top:12px;
+
+    margin-bottom: 3px;
+
+    font-style: regular;
+
+    color: #008367;
+
+}
+
+
+
+.text_cell_render h4 {    /*Use this for captions*/
+
+    font-family: 'Merriweather', serif;
+
+    font-weight: 300; 
+
+    font-size: 100%;
+
+    line-height: 120%;
+
+    text-align: center;
+
+    margin-top: 1em;
+
+    margin-bottom: 2em;
+
+    font-style: regular;
+
+}
+
+
+
+.text_cell_render h5 {  /*Use this for small titles*/
+
+    font-family: 'Source Sans Pro', sans-serif;
+
+    font-weight: regular;
+
+    font-size: 130%;
+
+    color: #e31937;
+
+    font-style: italic;
+
+    margin-bottom: .5em;
+
+    margin-top: 1em;
+
+    display: block;
+
+}
+
+
+
+.text_cell_render h6 { /*use this for copyright note*/
+
+    font-family: 'Source Code Pro', sans-serif;
+
+    font-weight: 300;
+
+    font-size: 9pt;
+
+    line-height: 100%;
+
+    color: grey;
+
+    margin-bottom: 1px;
+
+    margin-top: 1px;
+
+}
+
+
+
+    .CodeMirror{
+
+            font-family: "Source Code Pro";
+
+			font-size: 90%;
+
+    }
+
+/*    .prompt{
+
+        display: None;
+
+    }*/
+
+	
+
+    
+
+    .warning{
+
+        color: rgb( 240, 20, 20 )
+
+        }  
+
+</style>
+
+<script>
+
+    MathJax.Hub.Config({
+
+                        TeX: {
+
+                           extensions: ["AMSmath.js"], 
+
+                           equationNumbers: { autoNumber: "AMS", useLabelIds: true}
+
+                           },
+
+                tex2jax: {
+
+                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+
+                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+
+                },
+
+                displayAlign: 'center', // Change this to 'center' to center equations.
+
+                "HTML-CSS": {
+
+                    styles: {'.MathJax_Display': {"margin": 4}}
+
+                }
+
+        });
+
+</script>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+ 
+
+
+
+
+
+INFO:__main__:Fetching URL: https://raw.githubusercontent.com/engineersCode/EngComp/master/modules/1_offtheground/1_Interacting_with_Python.ipynb
+
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com
+
+DEBUG:requests.packages.urllib3.connectionpool:"GET /engineersCode/EngComp/master/modules/1_offtheground/1_Interacting_with_Python.ipynb HTTP/1.1" 200 9686
+
+DEBUG:traitlets:Applying preprocessor: TagRemovePreprocessor
+
+DEBUG:traitlets:Applying preprocessor: RegexRemovePreprocessor
+
+DEBUG:traitlets:Applying preprocessor: coalesce_streams
+
+DEBUG:traitlets:Applying preprocessor: CSSHTMLHeaderPreprocessor
+
+DEBUG:traitlets:Applying preprocessor: HighlightMagicsPreprocessor
+
+DEBUG:traitlets:Attempting to load template basic
+
+DEBUG:traitlets:    template_path: .
+
