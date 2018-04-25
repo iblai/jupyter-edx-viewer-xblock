@@ -1,7 +1,18 @@
 # Jupyter Notebook Viewer
 
 ## Overview
-Fetches and displays part of, or an entire Jupyter Notebook in an XBlock.
+_Fetch and display part of, or an entire Jupyter Notebook in an XBlock._
+
+Jupyter is a "killer app" for education, said Prof. Lorena Barba in her [keynote](http://lorenabarba.com/gallery/prof-barba-gave-keynote-at-scipy-2014/) at the 2014 Scientific Python Conference ([video](https://youtu.be/TWxwKDT88GU?t=9m24s) available).
+Many people are writing lessons, tutorials, whole courses and even books using Jupyter.
+It is a **new genre of open educational resource** (OER).
+What if you want to create an online course on Open edX using content originally written as Jupyter notebook?
+You certainly don't want to duplicate the content, much less copy-and-paste.
+This XBlock allows you to embed the content dynamically from a notebook available on a public URL.
+
+Prof. Barba used the XBlock in the second half of her course module, [Get Data Off The Ground with Python](https://openedx.seas.gwu.edu/courses/course-v1:GW+EngComp1+2018/about).
+Check it out!
+
 
 ## Installation
 ### XBlock
