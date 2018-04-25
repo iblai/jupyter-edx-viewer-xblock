@@ -99,3 +99,10 @@ New pre-processors can be added by subclassing `preprocessors.Processor` and app
 These operate on the final, raw HTML output string, making modifications as necessary. 
 
 New post processors can be added in the `postprocess` function
+
+## Copyright and License
+
+(c) 2017 IBL Studios and Lorena A. Barba, [code is under BSD-3 clause](https://github.com/engineersCode/EngComp/blob/master/LICENSE). 
+
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+
