@@ -100,6 +100,12 @@ These operate on the final, raw HTML output string, making modifications as nece
 
 New post processors can be added in the `postprocess` function
 
+## Usage notes
+
+### Watch the demo!
+
+[![demo](https://github.com/ibleducation/jupyter-viewer-xblock/blob/master/demo-thumbnail.png)](http://www.youtube.com/watch?v=K8jhWgQnxvI)
+
 ## Copyright and License
 
 (c) 2017 IBL Studios and Lorena A. Barba, [code is under BSD-3 clause](https://github.com/engineersCode/EngComp/blob/master/LICENSE). 
