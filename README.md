@@ -108,7 +108,7 @@ New post processors can be added in the `postprocess` function
 
 ### Functionality
 
-The Jupyter Viewer XBlock allows a course author to add content to an online course on the Open edX platformfrom, from a publicly available Jupyter notebook (e.g., on GitHub).
+The Jupyter Viewer XBlock allows a course author to add content to an online course on the Open edX platform, from a publicly available Jupyter notebook (e.g., on GitHub).
 If you only provide one parameter, the notebook's public URL, the XBlock will display the entire notebook in an iframe.
 But it's often the case that instructors write Jupyter notebooks with a full lesson, over several pages if printed.
 Showing the whole notebook in one frame withing the online course may yield a clunky user experience.
