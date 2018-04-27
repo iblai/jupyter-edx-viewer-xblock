@@ -106,6 +106,18 @@ New post processors can be added in the `postprocess` function
 
 [![demo](https://github.com/ibleducation/jupyter-viewer-xblock/blob/master/demo-thumbnail.png)](http://www.youtube.com/watch?v=K8jhWgQnxvI)
 
+### Functionality
+
+The Jupyter Viewer XBlock allows a course author to add content to an online course on the Open edX platformfrom, from a publicly available Jupyter notebook (e.g., on GitHub).
+If you only provide one parameter, the notebook's public URL, the XBlock will display the entire notebook in an iframe.
+But it's often the case that instructors write Jupyter notebooks with a full lesson, over several pages if printed.
+Showing the whole notebook in one frame withing the online course may yield a clunky user experience.
+In our experience, your online course will look beter if you display a whole lesson over several units in an Open edX learning sequence.
+You can achieve this effect by choosing _start_ and _end_ tags: strings in the source notebook that mark the first and (exclusive) last cells to display.
+After choosing these tags, you may want to adjust the iframe height to fit the content length.
+If you have images embedded in markdown cells, you are likely to have a relative path that works in your local notebook.
+In the XBlock, you can provide the absolute path to the images in your notebook repo to ensure that they are properly shown.
+
 ## Copyright and License
 
 (c) 2017 IBL Studios and Lorena A. Barba, [code is under BSD-3 clause](https://github.com/engineersCode/EngComp/blob/master/LICENSE). 
