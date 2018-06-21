@@ -27,9 +27,11 @@ class NotebookViewer(APIView):
         try:
             html = process_nb(**nb_data.validated_data)
 
-        # Thrown when nbformat fails
-        except ValueError:
-            error = "URL {} does not point to a valid Notebook JSON"\
+        # Thrown when nbformat fails - caution, other errors could throw this
+        except ValueError as e:
+            log.exception(e)
+            error = "An error occurred while converting {}. Please see the "\
+                    "LMS/CMS logs for more details"\
                     .format(nb_data.validated_data['url'])
             return HttpResponse(error, status=400)
 
