@@ -66,7 +66,7 @@ class JupyterViewerXBlock(XBlock, StudioEditableXBlockMixin):
         return data.decode("utf8")
 
     def student_view(self, context=None):
-        base = reverse('jupyter_nb_viewer') + "?url={}"
+        base = reverse('jupyter_nb_viewer') + "?{}"
 
         # setup start/end tags
         if self.start_tag != '':
@@ -77,7 +77,7 @@ class JupyterViewerXBlock(XBlock, StudioEditableXBlockMixin):
         base += "&{}".format(urlencode({'images_url': self.image_url}))
 
         # setup full url and inject into template iframe
-        full_url = base.format(self.jupyter_url)
+        full_url = base.format(urlencode({'url': self.jupyter_url}))
         log.debug("Full URL: {}".format(full_url))
         base_html = self.resource_string('static/html/student_view.html')\
             .format(self.xblock_height, full_url)
