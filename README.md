@@ -41,7 +41,8 @@ Add the following to the bottom of each file:
 ```python
 # Jupyter Viewer XBlock Endpoint
 urlpatterns += (
-    url(r'^api/jupyter/', include('xblock_jupyter_viewer.rest.urls')),
+    url(r'^api/jupyter/', include('xblock_jupyter_viewer.rest.urls', 
+                                  namespace='xblock_jupyter_viewer')),
 )
 ```
 
