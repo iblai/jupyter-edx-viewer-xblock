@@ -66,7 +66,7 @@ class JupyterViewerXBlock(XBlock, StudioEditableXBlockMixin):
         return data.decode("utf8")
 
     def student_view(self, context=None):
-        base = reverse('jupyter_nb_viewer') + "?{}"
+        base = reverse('xblock_jupyter_viewer:jupyter_nb_viewer') + "?{}"
 
         # setup start/end tags
         if self.start_tag != '':

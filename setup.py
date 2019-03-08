@@ -22,7 +22,7 @@ def package_data(pkg, roots):
 
 setup(
     name='xblock_jupyter_viewer',
-    version='1.0',
+    version='1.0.1',
     description='View Jupyter Notebooks in your XBlock',
     license='UNKNOWN',          # TODO: choose a license: 'AGPL v3' and 'Apache 2.0' are popular.
     packages=[
