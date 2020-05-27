@@ -2,7 +2,7 @@
 
 import logging
 import pkg_resources
-from urllib import urlencode
+from urllib.parse import urlencode
 
 from django.core.urlresolvers import reverse
 
