@@ -10,8 +10,6 @@ What if you want to create an online course on Open edX using content originally
 You certainly don't want to duplicate the content, much less copy-and-paste.
 This XBlock allows you to embed the content dynamically from a notebook available on a public URL.
 
-Prof. Barba used the XBlock in the second half of her course module, [Get Data Off The Ground with Python](https://openedx.seas.gwu.edu/courses/course-v1:GW+EngComp1+2018/about).
-Check it out!
 
 
 ## Installation
